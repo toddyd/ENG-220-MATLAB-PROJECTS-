@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 st.title("CSV Data Visualization App")
 
 # File uploader for CSV
-uploaded_file = st.file_uploader("gunarchieve.csv", type=["csv"])
+uploaded_file = st.file_uploader(, type=["csv"])
 
 if uploaded_file is not None:
     # Read the CSV file
@@ -15,7 +15,7 @@ if uploaded_file is not None:
     st.dataframe(data)
 
     # Dropdown for selecting columns
-    columns = data.columns[[1,5,6,7,8,9]].tolist()
+    columns = data.columns[[1,3,6,7,8,9]].tolist()
     x_column = st.selectbox("Select X-axis column", columns)
     y_column = st.selectbox("Select Y-axis column", columns)
 
